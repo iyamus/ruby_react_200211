@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 // Link to other component
 import HelloWorld from "./HelloWorld";
@@ -14,14 +13,16 @@ class App extends React.Component {
   render() {
     return (
       // Redux installed in your app with Provider
+  
       <Provider store={store}>
+        <App />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => ("Home")}></Route>
             <Route exact path="/hello" render={() => <HelloWorld greeting="App component" />}></Route>
           </Switch>
         </BrowserRouter>
-      </Provider>
+      </Provider>, document.getElementById('root')
     );
   }
 }

@@ -1,20 +1,19 @@
 import React, {useState} from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types" 
 
 // Using react-redux
-// import {connect} from "react-redux"; ==> ES 버전 변겅으로 에러 발생함.
-import {connect} from "react-redux/lib/connect/connect"
+import {connect} from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-const GET_REQUEST = 'Get request';
+const GET_THINGS_REQUEST = 'GET_THINGS_REQUEST';
 
 function getThings() {
   return {
-    type: GET_REQUEST
+    type: GET_THINGS_REQUEST
   };
 };
 
-class HelloWorld extends React.Component {
+ class HelloWorld extends React.Component {
   render() {
     return (
       <React.Fragment>
